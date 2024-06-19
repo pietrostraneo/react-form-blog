@@ -8,7 +8,8 @@ export default function ArticleList({ data, removePost }) {
                             <>
                                 <div key={index}>
                                     <h2>{d.title}</h2>
-                                    <p>{d.description}</p>
+                                    <p>{d.description || 'No description'}</p>
+                                    <button onClick={() => removePost(index)}>Remove</button>
                                 </div>
                             </>
                         ))}
